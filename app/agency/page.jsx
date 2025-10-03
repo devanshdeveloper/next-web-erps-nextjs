@@ -1,3 +1,3 @@
-import AgencyPage from "../../pages/agency/main"
+import AgencyPage from "../../page-data/agency/main"
 
 export default AgencyPage;

@@ -1,3 +1,3 @@
-import campusPage from "../../pages/campus/main"
+import campusPage from "../../page-data/campus/main"
 
 export default campusPage;

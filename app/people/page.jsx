@@ -1,3 +1,3 @@
-import peoplePage from "../../pages/people/main"
+import peoplePage from "../../page-data/people/main"
 
 export default peoplePage;

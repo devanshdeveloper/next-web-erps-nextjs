@@ -26,3 +26,6 @@ export const submitDemoForm = async (formData) => {
     return { success: false, error: error.message };
   }
 };
+
+
+export default () => {};

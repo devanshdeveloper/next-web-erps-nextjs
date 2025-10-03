@@ -1,3 +1,3 @@
-import inventoryPage from "../../pages/inventory/main"
+import inventoryPage from "../../page-data/inventory/main"
 
 export default inventoryPage;

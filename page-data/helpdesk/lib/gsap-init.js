@@ -61,3 +61,6 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
     },
   });
 };
+
+
+export default () => {};

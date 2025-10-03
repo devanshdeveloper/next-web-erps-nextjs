@@ -1,3 +1,3 @@
-import fieldopsPage from "../../pages/fieldops/main"
+import fieldopsPage from "../../page-data/fieldops/main"
 
 export default fieldopsPage;

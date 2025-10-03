@@ -1,3 +1,3 @@
-import plantPage from "../../pages/plant/main"
+import plantPage from "../../page-data/plant/main"
 
 export default plantPage;

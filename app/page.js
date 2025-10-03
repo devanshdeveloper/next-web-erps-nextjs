@@ -1,4 +1,4 @@
-import MainPage from "../pages/main/main"
+import MainPage from "../page-data/main/main"
 
 export default MainPage;
 

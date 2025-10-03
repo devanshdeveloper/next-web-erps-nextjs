@@ -1,3 +1,3 @@
-import salonHubPage from "../../pages/salonhub/main"
+import salonHubPage from "../../page-data/salonhub/main"
 
 export default salonHubPage;

@@ -1,4 +1,4 @@
-import Commerce from "../../pages/commerce/main"
+import Commerce from "../../page-data/commerce/main"
 
 function CommercePage() {
   return <Commerce />

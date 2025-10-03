@@ -1,3 +1,3 @@
-import fithubPage from "../../pages/fithub/main"
+import fithubPage from "../../page-data/fithub/main"
 
 export default fithubPage;

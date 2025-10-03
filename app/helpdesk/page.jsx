@@ -1,3 +1,3 @@
-import helpdeskPage from "../../pages/helpdesk/main"
+import helpdeskPage from "../../page-data/helpdesk/main"
 
 export default helpdeskPage;

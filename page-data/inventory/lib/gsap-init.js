@@ -32,3 +32,5 @@ export const initGSAP = async () => {
 };
 
 export { gsap, ScrollTrigger };
+
+export default () => {};

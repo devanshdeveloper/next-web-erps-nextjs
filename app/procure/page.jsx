@@ -1,3 +1,3 @@
-import procurePage from "../../pages/procure/main"
+import procurePage from "../../page-data/procure/main"
 
 export default procurePage;
