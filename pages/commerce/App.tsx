@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { initGSAP } from './lib/gsap-init.js';
+import { initGSAP } from './lib/gsap-init';
 
 // Components
 import Navbar from './components/Navbar';
@@ -22,7 +22,7 @@ function App() {
 
   useEffect(() => {
     // Initialize GSAP animations
-    initGSAP().catch(console.error);
+    initGSAP();
   }, []);
 
   const openDemoModal = () => setIsDemoModalOpen(true);

@@ -1,8 +1,7 @@
 import { gsap } from 'gsap';
 
-let ScrollTrigger;
+export const initGSAP =  async () => {
 
-export const initGSAP = async () => {
   if (typeof window !== 'undefined') {
     ScrollTrigger = (await import('gsap/ScrollTrigger')).ScrollTrigger;
     gsap.registerPlugin(ScrollTrigger);
@@ -85,5 +84,3 @@ export const initGSAP = async () => {
 };
 
 export { gsap, ScrollTrigger };
-
-export default () => {}
