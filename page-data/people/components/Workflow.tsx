@@ -108,7 +108,7 @@ const Workflow = () => {
             {/* Connecting line */}
             <div
               ref={lineRef}
-              className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 via-teal via-orange-500 to-purple-600 transform -translate-y-1/2 origin-left"
+              className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 via-teal-500 via-orange-500 to-purple-600 transform -translate-y-1/2 origin-left"
             />
             
             <div className="grid grid-cols-4 gap-8">

@@ -112,7 +112,7 @@ const UseCases: React.FC = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-16 bg-gradient-to-r from-blue-500 to-teal rounded-2xl p-8 text-white"
+          className="mt-16 bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl p-8 text-white"
         >
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>

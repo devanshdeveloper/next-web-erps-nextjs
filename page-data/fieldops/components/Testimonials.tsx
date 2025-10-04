@@ -134,7 +134,7 @@ const Testimonials: React.FC = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-blue-500 to-teal rounded-2xl p-8 text-white mt-16"
+          className="bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl p-8 text-white mt-16"
         >
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>

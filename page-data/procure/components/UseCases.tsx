@@ -89,7 +89,7 @@ const UseCases = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-blue-500 to-teal rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Ready to transform your procurement process?
             </h3>

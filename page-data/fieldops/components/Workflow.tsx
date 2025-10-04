@@ -110,7 +110,7 @@ const Workflow: React.FC = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mt-12 p-8 bg-gradient-to-r from-blue-500 to-teal rounded-xl text-white"
+          className="text-center mt-12 p-8 bg-gradient-to-r from-blue-500 to-teal-500 rounded-xl text-white"
         >
           <h3 className="font-poppins font-bold text-2xl mb-2">
             Ready to streamline your field operations?

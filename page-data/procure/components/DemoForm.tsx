@@ -85,7 +85,7 @@ const DemoForm: React.FC<DemoFormProps> = ({ isOpen, onClose }) => {
               className="relative w-full max-w-2xl p-0 mx-auto bg-white rounded-2xl shadow-xl"
             >
               {/* Header */}
-              <div className="bg-gradient-to-r from-blue-500 to-teal p-8 text-white rounded-t-2xl">
+              <div className="bg-gradient-to-r from-blue-500 to-teal-500 p-8 text-white rounded-t-2xl">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-2xl font-bold">Request Your Demo</h3>

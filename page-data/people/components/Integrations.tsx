@@ -89,7 +89,7 @@ const Integrations = () => {
 
         {/* Integration CTA */}
         <motion.div
-          className="text-center mt-16 bg-gradient-to-r from-blue-500 to-teal rounded-2xl p-8 text-white"
+          className="text-center mt-16 bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl p-8 text-white"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}

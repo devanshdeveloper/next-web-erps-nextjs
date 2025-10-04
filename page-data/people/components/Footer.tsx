@@ -44,7 +44,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       {/* Secondary lead capture */}
-      <div className="bg-gradient-to-r from-blue-500 to-teal py-12">
+      <div className="bg-gradient-to-r from-blue-500 to-teal-500 py-12">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center max-w-4xl mx-auto"
