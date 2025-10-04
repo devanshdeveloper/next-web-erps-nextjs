@@ -105,7 +105,7 @@ export default function Pricing() {
                 className={`w-full py-3 rounded-lg font-semibold mb-8 transition-all ${
                   tier.highlighted
                     ? 'bg-white text-orange-500 hover:bg-gray-100'
-                    : 'bg-blue-500 text-white hover:bg-blue/80'
+                    : 'bg-blue-500 text-white hover:bg-blue-500/80'
                 }`}
               >
                 {tier.cta}

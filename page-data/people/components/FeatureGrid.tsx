@@ -96,9 +96,9 @@ const FeatureGrid = () => {
 
   const getColorClasses = (color: string) => {
     const colorMap: { [key: string]: { icon: string; tag: string; hover: string } } = {
-      'blue-500': { icon: 'text-blue', tag: 'bg-blue-500', hover: 'group-hover:bg-blue/5' },
-      'teal-500': { icon: 'text-teal', tag: 'bg-teal-500', hover: 'group-hover:bg-teal/5' },
-      'orange-500': { icon: 'text-orange', tag: 'bg-orange-500', hover: 'group-hover:bg-orange/5' },
+      'blue-500': { icon: 'text-blue', tag: 'bg-blue-500', hover: 'group-hover:bg-blue-500/5' },
+      'teal-500': { icon: 'text-teal', tag: 'bg-teal-500', hover: 'group-hover:bg-teal-500/5' },
+      'orange-500': { icon: 'text-orange', tag: 'bg-orange-500', hover: 'group-hover:bg-orange-500/5' },
       'purple-600': { icon: 'text-purple-600', tag: 'bg-purple-600', hover: 'group-hover:bg-purple-50' },
       'green-600': { icon: 'text-green-600', tag: 'bg-green-600', hover: 'group-hover:bg-green-50' },
       'red-600': { icon: 'text-red-600', tag: 'bg-red-600', hover: 'group-hover:bg-red-50' },

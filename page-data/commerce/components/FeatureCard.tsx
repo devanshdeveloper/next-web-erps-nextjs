@@ -23,7 +23,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       className={`feature-card bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 ${className}`}
     >
       <div className="mb-6">
-        <div className="inline-flex items-center justify-center w-12 h-12 bg-blue/10 rounded-lg mb-4">
+        <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-500/10 rounded-lg mb-4">
           {icon}
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
@@ -32,7 +32,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       
       <motion.button
         whileHover={{ x: 5 }}
-        className="inline-flex items-center text-blue-500 font-medium hover:text-blue/80 transition-colors"
+        className="inline-flex items-center text-blue-500 font-medium hover:text-blue-500/80 transition-colors"
       >
         {cta}
         <ArrowRight size={16} className="ml-2" />

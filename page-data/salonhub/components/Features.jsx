@@ -102,7 +102,7 @@ const Features = () => {
   const getColorClasses = (color) => {
     switch (color) {
       case 'blue-500':
-        return 'bg-blue/10 text-blue-500 border-blue/20';
+        return 'bg-blue-500/10 text-blue-500 border-blue-500/20';
       case 'pink-500':
         return 'bg-pink-500/10 text-pink-500 border-pink-500/20';
       case 'orange-500':
@@ -122,7 +122,7 @@ const Features = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center space-x-2 bg-blue/10 text-blue-500 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center space-x-2 bg-blue-500/10 text-blue-500 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Package className="w-4 h-4" />
             <span>Complete Solution</span>
           </div>

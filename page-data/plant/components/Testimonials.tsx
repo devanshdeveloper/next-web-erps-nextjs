@@ -53,7 +53,7 @@ const Testimonials: React.FC = () => {
               whileHover={{ y: -5 }}
               className="bg-slate-50 p-8 rounded-xl border border-slate-200 hover:shadow-lg transition-all duration-300 relative"
             >
-              <Quote className="absolute top-6 right-6 text-blue/20" size={32} />
+              <Quote className="absolute top-6 right-6 text-blue-500/20" size={32} />
               
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-blue-500 text-white rounded-xl flex items-center justify-center font-bold text-xl mr-4">

@@ -81,7 +81,7 @@ const UseCases: React.FC = () => {
                 whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                 className="bg-gray-50 rounded-xl p-6 hover:bg-white hover:shadow-lg transition-all duration-200 border border-transparent hover:border-gray-200"
               >
-                <div className="w-14 h-14 bg-blue/10 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6">
                   <Icon className="w-7 h-7 text-blue-500" />
                 </div>
                 

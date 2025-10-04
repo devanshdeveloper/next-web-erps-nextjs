@@ -68,7 +68,7 @@ const Testimonials: React.FC = () => {
               viewport={{ once: true }}
               className="bg-gray-50 rounded-xl p-6 relative"
             >
-              <div className="absolute top-4 right-4 text-blue/20">
+              <div className="absolute top-4 right-4 text-blue-500/20">
                 <Quote className="w-8 h-8" />
               </div>
               

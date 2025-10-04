@@ -132,7 +132,7 @@ const FeatureGrid = () => {
               className="feature-card-gsap feature-card bg-white rounded-2xl p-8 border border-gray-200 cursor-pointer group"
             >
               <div className="flex items-start justify-between mb-6">
-                <div className="inline-flex items-center justify-center w-14 h-14 bg-blue/10 rounded-xl group-hover:bg-blue/20 transition-colors duration-300">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-blue-500/10 rounded-xl group-hover:bg-blue-500/20 transition-colors duration-300">
                   <feature.icon className="h-7 w-7 text-blue-500" />
                 </div>
                 <span className={`px-3 py-1 rounded-full text-xs font-medium ${tagColors[feature.tag]}`}>

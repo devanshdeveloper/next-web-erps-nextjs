@@ -73,7 +73,7 @@ const HowItWorks = () => {
                   </div>
 
                   {/* Icon */}
-                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue/10 to-pink-500/10 rounded-2xl flex items-center justify-center">
+                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500/10 to-pink-500/10 rounded-2xl flex items-center justify-center">
                     <step.icon className="w-10 h-10 text-blue-500" />
                   </div>
 

@@ -98,8 +98,8 @@ export default function PricingTeaser() {
               <button
                 className={`w-full py-3 rounded-md font-semibold transition-all ${
                   plan.highlight
-                    ? 'bg-orange-500 text-white hover:bg-orange/90'
-                    : 'bg-blue-500 text-white hover:bg-blue/90'
+                    ? 'bg-orange-500 text-white hover:bg-orange-500/90'
+                    : 'bg-blue-500 text-white hover:bg-blue-500/90'
                 }`}
               >
                 Get Started

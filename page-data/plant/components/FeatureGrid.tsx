@@ -104,7 +104,7 @@ const FeatureGrid: React.FC = () => {
                     <h3 className="font-semibold text-slate-800 text-lg">{feature.title}</h3>
                   </div>
                 </div>
-                <span className="bg-blue/10 text-blue-500 text-xs px-2 py-1 rounded-full font-medium">
+                <span className="bg-blue-500/10 text-blue-500 text-xs px-2 py-1 rounded-full font-medium">
                   {feature.badge}
                 </span>
               </div>

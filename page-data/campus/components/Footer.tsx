@@ -149,7 +149,7 @@ export default function Footer({ onDemoClick }: FooterProps) {
               />
               <button
                 onClick={onDemoClick}
-                className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange/90 transition-all whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-800"
+                className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-500/90 transition-all whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-gray-800"
               >
                 Get Started
               </button>

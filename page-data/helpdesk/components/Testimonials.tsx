@@ -57,7 +57,7 @@ export default function Testimonials() {
 
         <div className="max-w-4xl mx-auto">
           <div className="relative bg-white rounded-lg shadow-xl p-8 md:p-12">
-            <Quote className="absolute top-6 left-6 w-12 h-12 text-blue/10" />
+            <Quote className="absolute top-6 left-6 w-12 h-12 text-blue-500/10" />
 
             <AnimatePresence mode="wait">
               <motion.div
@@ -89,7 +89,7 @@ export default function Testimonials() {
             <div className="flex items-center justify-center gap-4 mt-8">
               <button
                 onClick={prev}
-                className="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center hover:bg-blue/90 transition-colors"
+                className="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center hover:bg-blue-500/90 transition-colors"
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft className="w-5 h-5" />
@@ -110,7 +110,7 @@ export default function Testimonials() {
 
               <button
                 onClick={next}
-                className="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center hover:bg-blue/90 transition-colors"
+                className="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center hover:bg-blue-500/90 transition-colors"
                 aria-label="Next testimonial"
               >
                 <ChevronRight className="w-5 h-5" />

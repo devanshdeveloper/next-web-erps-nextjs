@@ -22,7 +22,7 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
   return (
     <div className="testimonial-card bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
       <div className="flex items-center mb-6">
-        <Quote className="text-blue/20" size={48} />
+        <Quote className="text-blue-500/20" size={48} />
         <div className="flex ml-auto">
           {[...Array(rating)].map((_, i) => (
             <Star key={i} className="text-yellow-400 fill-current" size={20} />

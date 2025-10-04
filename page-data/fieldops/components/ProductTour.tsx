@@ -116,7 +116,7 @@ const ProductTour: React.FC = () => {
               >
                 <div className="h-full flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-24 h-24 bg-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-24 h-24 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-2xl font-bold text-blue-500">
                         #{slide}
                       </span>

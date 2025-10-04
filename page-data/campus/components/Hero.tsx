@@ -24,7 +24,7 @@ export default function Hero({ onDemoClick }: HeroProps) {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={onDemoClick}
-                className="bg-orange-500 text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-orange/90 transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 shadow-lg"
+                className="bg-orange-500 text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-orange-500/90 transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 shadow-lg"
               >
                 Request Demo
               </button>

@@ -201,7 +201,7 @@ export default function DemoForm({ isOpen, onClose }: DemoFormProps) {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-orange-500 text-white py-4 rounded-lg font-semibold text-lg hover:bg-orange/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-orange-500 text-white py-4 rounded-lg font-semibold text-lg hover:bg-orange-500/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Submitting...' : 'Request Demo'}
                 </button>

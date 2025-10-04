@@ -28,7 +28,7 @@ export default function StickyMobileCTA({ onCTAClick }: StickyMobileCTAProps) {
     >
       <button
         onClick={onCTAClick}
-        className="w-full bg-orange-500 text-white py-4 rounded-lg font-semibold text-lg hover:bg-orange/90 transition-all shadow-lg"
+        className="w-full bg-orange-500 text-white py-4 rounded-lg font-semibold text-lg hover:bg-orange-500/90 transition-all shadow-lg"
       >
         Request Demo
       </button>

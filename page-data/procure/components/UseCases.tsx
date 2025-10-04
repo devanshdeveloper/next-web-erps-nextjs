@@ -73,7 +73,7 @@ const UseCases = () => {
                   <p className="text-gray-600 leading-relaxed mb-4">
                     {useCase.description}
                   </p>
-                  <div className="inline-flex items-center px-3 py-1 bg-teal/10 text-teal-500 rounded-full text-sm font-medium">
+                  <div className="inline-flex items-center px-3 py-1 bg-teal-500/10 text-teal-500 rounded-full text-sm font-medium">
                     {useCase.metrics}
                   </div>
                 </div>

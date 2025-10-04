@@ -249,7 +249,7 @@ const ProductTour = () => {
             </div>
             <div className="grid grid-cols-2 gap-4 mb-6">
               <motion.div 
-                className="bg-blue/10 rounded-xl p-4 text-center"
+                className="bg-blue-500/10 rounded-xl p-4 text-center"
                 whileHover={{ scale: 1.05 }}
               >
                 <div className="text-2xl font-bold text-blue-500">{section.mockup.data.revenue}</div>
@@ -358,7 +358,7 @@ const ProductTour = () => {
                 </div>
 
                 <motion.button
-                  className="inline-flex items-center space-x-2 bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue/90 transition-colors duration-200"
+                  className="inline-flex items-center space-x-2 bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500/90 transition-colors duration-200"
                   whileHover={{ scale: 1.05, x: 5 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -381,7 +381,7 @@ const ProductTour = () => {
                   {/* Decorative elements */}
                   <div className="absolute -top-4 -right-4 w-8 h-8 bg-orange-500/20 rounded-full"></div>
                   <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-pink-500/10 rounded-full"></div>
-                  <div className="absolute top-1/2 -left-8 w-6 h-6 bg-blue/20 rounded-full"></div>
+                  <div className="absolute top-1/2 -left-8 w-6 h-6 bg-blue-500/20 rounded-full"></div>
                 </div>
               </motion.div>
             </motion.div>

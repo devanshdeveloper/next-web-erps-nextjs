@@ -59,7 +59,7 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
               ))}
               <button
                 onClick={onDemoClick}
-                className="bg-orange-500 text-white px-6 py-2.5 rounded-md font-semibold hover:bg-orange/90 transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                className="bg-orange-500 text-white px-6 py-2.5 rounded-md font-semibold hover:bg-orange-500/90 transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
               >
                 Request Demo
               </button>
@@ -100,7 +100,7 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
                     setIsOpen(false);
                     onDemoClick();
                   }}
-                  className="w-full bg-orange-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-orange/90 transition-all focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                  className="w-full bg-orange-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-orange-500/90 transition-all focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
                 >
                   Request Demo
                 </button>
@@ -113,7 +113,7 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t shadow-lg p-4">
         <button
           onClick={onDemoClick}
-          className="w-full bg-orange-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-orange/90 transition-all focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+          className="w-full bg-orange-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-orange-500/90 transition-all focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
         >
           Request Demo
         </button>

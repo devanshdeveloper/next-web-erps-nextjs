@@ -97,7 +97,7 @@ const Testimonials = () => {
               className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-gray-200"
             >
               <div className="flex items-start justify-between mb-6">
-                <Quote className="h-12 w-12 text-blue/20 flex-shrink-0" />
+                <Quote className="h-12 w-12 text-blue-500/20 flex-shrink-0" />
                 <div className="flex items-center space-x-1">
                   {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
@@ -114,7 +114,7 @@ const Testimonials = () => {
                   <img
                     src={testimonials[currentIndex].image}
                     alt={testimonials[currentIndex].name}
-                    className="w-16 h-16 rounded-full object-cover border-4 border-blue/10"
+                    className="w-16 h-16 rounded-full object-cover border-4 border-blue-500/10"
                   />
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">
@@ -129,7 +129,7 @@ const Testimonials = () => {
                   </div>
                 </div>
                 
-                <div className="bg-teal/10 px-4 py-2 rounded-lg">
+                <div className="bg-teal-500/10 px-4 py-2 rounded-lg">
                   <p className="text-teal-500 font-semibold text-sm text-gray-900">
                     {testimonials[currentIndex].metric}
                   </p>

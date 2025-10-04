@@ -120,7 +120,7 @@ const DemoForm: React.FC<DemoFormProps> = ({ isOpen, onClose }) => {
                   exit={{ opacity: 0, scale: 0.8 }}
                   className="text-center py-8"
                 >
-                  <div className="w-16 h-16 bg-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-teal-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-8 h-8 text-teal-500 " />
                   </div>
                   <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-2">
@@ -163,7 +163,7 @@ const DemoForm: React.FC<DemoFormProps> = ({ isOpen, onClose }) => {
                       id="name"
                       className={`w-full px-4 py-3 rounded-lg border-2 transition-colors ${
                         errors.name ? 'border-red-300 focus:border-red-500' : 'border-gray-200 focus:border-blue'
-                      } focus:outline-none focus:ring-2 focus:ring-blue/20`}
+                      } focus:outline-none focus:ring-2 focus:ring-blue-500/20`}
                       placeholder="Enter your full name"
                     />
                     {errors.name && (
@@ -184,7 +184,7 @@ const DemoForm: React.FC<DemoFormProps> = ({ isOpen, onClose }) => {
                         id="company"
                         className={`w-full px-4 py-3 rounded-lg border-2 transition-colors ${
                           errors.company ? 'border-red-300 focus:border-red-500' : 'border-gray-200 focus:border-blue'
-                        } focus:outline-none focus:ring-2 focus:ring-blue/20`}
+                        } focus:outline-none focus:ring-2 focus:ring-blue-500/20`}
                         placeholder="Company name"
                       />
                       {errors.company && (
@@ -203,7 +203,7 @@ const DemoForm: React.FC<DemoFormProps> = ({ isOpen, onClose }) => {
                         id="phone"
                         className={`w-full px-4 py-3 rounded-lg border-2 transition-colors ${
                           errors.phone ? 'border-red-300 focus:border-red-500' : 'border-gray-200 focus:border-blue'
-                        } focus:outline-none focus:ring-2 focus:ring-blue/20`}
+                        } focus:outline-none focus:ring-2 focus:ring-blue-500/20`}
                         placeholder="9876543210"
                       />
                       {errors.phone && (
@@ -223,7 +223,7 @@ const DemoForm: React.FC<DemoFormProps> = ({ isOpen, onClose }) => {
                       id="email"
                       className={`w-full px-4 py-3 rounded-lg border-2 transition-colors ${
                         errors.email ? 'border-red-300 focus:border-red-500' : 'border-gray-200 focus:border-blue'
-                      } focus:outline-none focus:ring-2 focus:ring-blue/20`}
+                      } focus:outline-none focus:ring-2 focus:ring-blue-500/20`}
                       placeholder="your@email.com"
                     />
                     {errors.email && (
@@ -243,7 +243,7 @@ const DemoForm: React.FC<DemoFormProps> = ({ isOpen, onClose }) => {
                         id="technicians"
                         className={`w-full px-4 py-3 rounded-lg border-2 transition-colors ${
                           errors.technicians ? 'border-red-300 focus:border-red-500' : 'border-gray-200 focus:border-blue'
-                        } focus:outline-none focus:ring-2 focus:ring-blue/20 bg-white`}
+                        } focus:outline-none focus:ring-2 focus:ring-blue-500/20 bg-white`}
                       >
                         <option value="">Select team size</option>
                         {technicianOptions.map((option) => (
@@ -266,7 +266,7 @@ const DemoForm: React.FC<DemoFormProps> = ({ isOpen, onClose }) => {
                         id="city"
                         className={`w-full px-4 py-3 rounded-lg border-2 transition-colors ${
                           errors.city ? 'border-red-300 focus:border-red-500' : 'border-gray-200 focus:border-blue'
-                        } focus:outline-none focus:ring-2 focus:ring-blue/20`}
+                        } focus:outline-none focus:ring-2 focus:ring-blue-500/20`}
                         placeholder="Mumbai, Delhi, etc."
                       />
                       {errors.city && (
@@ -285,7 +285,7 @@ const DemoForm: React.FC<DemoFormProps> = ({ isOpen, onClose }) => {
                       id="useCase"
                       className={`w-full px-4 py-3 rounded-lg border-2 transition-colors ${
                         errors.useCase ? 'border-red-300 focus:border-red-500' : 'border-gray-200 focus:border-blue'
-                      } focus:outline-none focus:ring-2 focus:ring-blue/20 bg-white`}
+                      } focus:outline-none focus:ring-2 focus:ring-blue-500/20 bg-white`}
                     >
                       <option value="">Select your industry</option>
                       {useCaseOptions.map((option) => (
@@ -303,7 +303,7 @@ const DemoForm: React.FC<DemoFormProps> = ({ isOpen, onClose }) => {
                       {...register('consent')}
                       type="checkbox"
                       id="consent"
-                      className="mt-1 w-4 h-4 text-blue-500 border-2 border-gray-300 rounded focus:ring-blue/20 focus:ring-2"
+                      className="mt-1 w-4 h-4 text-blue-500 border-2 border-gray-300 rounded focus:ring-blue-500/20 focus:ring-2"
                     />
                     <label htmlFor="consent" className="text-sm text-gray-600">
                       I agree to receive product updates and demo scheduling calls from NextWeb FieldOps. 
@@ -320,7 +320,7 @@ const DemoForm: React.FC<DemoFormProps> = ({ isOpen, onClose }) => {
                     disabled={isSubmitting}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full bg-orange-500 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-orange/90 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                    className="w-full bg-orange-500 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-orange-500/90 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                   >
                     {isSubmitting ? (
                       <>

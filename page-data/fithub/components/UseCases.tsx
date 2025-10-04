@@ -50,7 +50,7 @@ export default function UseCases() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-all"
             >
-              <div className="bg-blue/10 text-blue-500 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
+              <div className="bg-blue-500/10 text-blue-500 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
                 {useCase.icon}
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{useCase.title}</h3>

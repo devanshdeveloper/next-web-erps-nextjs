@@ -127,7 +127,7 @@ const PricingTeaser: React.FC<PricingTeaserProps> = ({ onGetQuote }) => {
                 onClick={onGetQuote}
                 className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center ${
                   plan.popular
-                    ? 'bg-orange-500 text-white hover:bg-orange/90'
+                    ? 'bg-orange-500 text-white hover:bg-orange-500/90'
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                 }`}
               >

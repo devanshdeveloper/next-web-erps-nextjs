@@ -96,7 +96,7 @@ const Pricing = () => {
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
                 className={`relative bg-white rounded-2xl p-8 border-2 ${plan.color} ${
-                  plan.popular ? 'ring-4 ring-blue/20' : ''
+                  plan.popular ? 'ring-4 ring-blue-500/20' : ''
                 } transition-all duration-300 hover:shadow-xl`}
               >
                 {plan.popular && (

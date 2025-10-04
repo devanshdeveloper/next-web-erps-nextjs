@@ -156,7 +156,7 @@ const Integrations: React.FC = () => {
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {['NextWeb Suite', 'WhatsApp', 'Google Maps', 'UPI Payments', 'SMS Gateway', 'CRM/ERP'].map((service) => (
                   <div key={service} className="bg-white rounded-lg p-3 text-center shadow-sm">
-                    <div className="w-8 h-8 bg-blue/10 rounded-lg mx-auto mb-2"></div>
+                    <div className="w-8 h-8 bg-blue-500/10 rounded-lg mx-auto mb-2"></div>
                     <span className="text-xs text-gray-600">{service}</span>
                   </div>
                 ))}

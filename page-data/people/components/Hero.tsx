@@ -146,15 +146,15 @@ const Hero = () => {
                     
                     {/* Stats */}
                     <div className="grid grid-cols-3 gap-4">
-                      <div className="bg-blue/10 p-3 rounded-lg">
+                      <div className="bg-blue-500/10 p-3 rounded-lg">
                         <div className="text-2xl font-bold text-blue-500">156</div>
                         <div className="text-xs text-gray-600">Employees</div>
                       </div>
-                      <div className="bg-teal/10 p-3 rounded-lg">
+                      <div className="bg-teal-500/10 p-3 rounded-lg">
                         <div className="text-2xl font-bold text-teal-500 ">₹18.5L</div>
                         <div className="text-xs text-gray-600">Total Payout</div>
                       </div>
-                      <div className="bg-orange/10 p-3 rounded-lg">
+                      <div className="bg-orange-500/10 p-3 rounded-lg">
                         <div className="text-2xl font-bold text-orange-500">98.2%</div>
                         <div className="text-xs text-gray-600">Attendance</div>
                       </div>
@@ -205,7 +205,7 @@ const Hero = () => {
         </div>
 
         {/* Background decoration */}
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-teal/5 to-transparent pointer-events-none" />
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-teal-500/5 to-transparent pointer-events-none" />
       </section>
 
       <DemoForm isOpen={isDemoFormOpen} onClose={() => setIsDemoFormOpen(false)} />

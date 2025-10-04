@@ -15,8 +15,8 @@ const Hero: React.FC<HeroProps> = ({ onDemoClick }) => {
     <section className="relative min-h-screen pt-16 lg:pt-20 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue/5 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-orange/5 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -32,7 +32,7 @@ const Hero: React.FC<HeroProps> = ({ onDemoClick }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="inline-flex items-center px-4 py-2 bg-blue/10 text-blue-500 rounded-full text-sm font-semibold mb-6"
+              className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-500 rounded-full text-sm font-semibold mb-6"
             >
               <Zap size={16} className="mr-2" />
               Real-Time Manufacturing Control

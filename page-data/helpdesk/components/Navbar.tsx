@@ -41,7 +41,7 @@ export default function Navbar({ onDemoClick }: NavbarProps) {
             ))}
             <button
               onClick={onDemoClick}
-              className="bg-orange-500 text-white px-5 py-2 rounded-md font-semibold text-sm hover:bg-orange/90 transition-colors"
+              className="bg-orange-500 text-white px-5 py-2 rounded-md font-semibold text-sm hover:bg-orange-500/90 transition-colors"
             >
               Request Demo
             </button>

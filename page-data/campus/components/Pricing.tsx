@@ -107,7 +107,7 @@ export default function Pricing({ onContactClick }: PricingProps) {
                 onClick={onContactClick}
                 className={`w-full py-3 px-6 rounded-lg font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 flex items-center justify-center gap-2 ${
                   tier.popular
-                    ? 'bg-orange-500 text-white hover:bg-orange/90 focus:ring-orange-500 shadow-lg hover:shadow-xl'
+                    ? 'bg-orange-500 text-white hover:bg-orange-500/90 focus:ring-orange-500 shadow-lg hover:shadow-xl'
                     : 'bg-white text-blue-500 border-2 border-blue-500 hover:bg-blue-500 hover:text-white focus:ring-blue'
                 }`}
               >

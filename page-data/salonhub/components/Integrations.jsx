@@ -84,7 +84,7 @@ const Integrations = () => {
   const getColorClasses = (color) => {
     switch (color) {
       case 'blue-500':
-        return 'bg-blue/10 text-blue-500 border-blue/20';
+        return 'bg-blue-500/10 text-blue-500 border-blue-500/20';
       case 'pink-500':
         return 'bg-pink-500/10 text-pink-500 border-pink-500/20';
       case 'orange-500':
@@ -198,7 +198,7 @@ const Integrations = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
-                  className="bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue/90 transition-colors duration-200"
+                  className="bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-500/90 transition-colors duration-200"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

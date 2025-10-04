@@ -115,7 +115,7 @@ export default function FeatureGrid() {
                 className="bg-white rounded-lg p-6 shadow-sm hover:shadow-xl transition-all border border-gray-100"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 bg-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Icon className="w-6 h-6 text-blue-500" />
                   </div>
                   {feature.badge && (

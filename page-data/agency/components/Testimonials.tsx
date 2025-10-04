@@ -90,7 +90,7 @@ export default function Testimonials() {
               transition={{ duration: 0.3 }}
               className="bg-white rounded-2xl p-8 lg:p-12 shadow-xl relative"
             >
-              <Quote className="absolute top-6 left-6 text-blue/20" size={48} />
+              <Quote className="absolute top-6 left-6 text-blue-500/20" size={48} />
 
               <div className="relative z-10">
                 <div className="mb-6">

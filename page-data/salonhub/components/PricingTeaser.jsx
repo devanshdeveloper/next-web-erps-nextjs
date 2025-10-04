@@ -78,10 +78,10 @@ const PricingTeaser = () => {
     switch (color) {
       case 'blue-500':
         return {
-          card: "bg-white border-slate-200 hover:border-blue/50",
+          card: "bg-white border-slate-200 hover:border-blue-500/50",
           price: "text-blue-500", 
           feature: "text-slate-600",
-          cta: "bg-blue-500 text-white hover:bg-blue/90"
+          cta: "bg-blue-500 text-white hover:bg-blue-500/90"
         };
       case 'orange-500':
         return {
@@ -110,7 +110,7 @@ const PricingTeaser = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center space-x-2 bg-blue/10 text-blue-500 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center space-x-2 bg-blue-500/10 text-blue-500 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Zap className="w-4 h-4" />
             <span>Simple Pricing</span>
           </div>
@@ -244,7 +244,7 @@ const PricingTeaser = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                className="bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue/90 transition-colors duration-200 flex items-center justify-center space-x-2"
+                className="bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-500/90 transition-colors duration-200 flex items-center justify-center space-x-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

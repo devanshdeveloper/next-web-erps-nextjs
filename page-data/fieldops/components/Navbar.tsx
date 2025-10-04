@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ onRequestDemo }) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={onRequestDemo}
-              className="bg-orange-500 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-orange/90 transition-colors duration-200"
+              className="bg-orange-500 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-orange-500/90 transition-colors duration-200"
             >
               Request Demo
             </motion.button>
@@ -109,7 +109,7 @@ const Navbar: React.FC<NavbarProps> = ({ onRequestDemo }) => {
                     onRequestDemo();
                     setIsMobileMenuOpen(false);
                   }}
-                  className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold w-full hover:bg-orange/90 transition-colors duration-200"
+                  className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold w-full hover:bg-orange-500/90 transition-colors duration-200"
                 >
                   Request Demo
                 </button>

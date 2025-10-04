@@ -213,7 +213,7 @@ export default function DemoForm({ isOpen, onClose }: DemoFormProps) {
 
                   <button
                     type="submit"
-                    className="w-full bg-orange-500 text-white px-6 py-4 rounded-md font-semibold text-lg hover:bg-orange/90 transition-colors"
+                    className="w-full bg-orange-500 text-white px-6 py-4 rounded-md font-semibold text-lg hover:bg-orange-500/90 transition-colors"
                   >
                     Request Demo
                   </button>

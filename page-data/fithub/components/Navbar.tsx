@@ -56,7 +56,7 @@ export default function Navbar({ onCTAClick }: NavbarProps) {
             ))}
             <button
               onClick={onCTAClick}
-              className="bg-orange-500 text-white px-6 py-2.5 rounded-md font-semibold hover:bg-orange/90 transition-all hover:scale-105"
+              className="bg-orange-500 text-white px-6 py-2.5 rounded-md font-semibold hover:bg-orange-500/90 transition-all hover:scale-105"
             >
               Request Demo
             </button>

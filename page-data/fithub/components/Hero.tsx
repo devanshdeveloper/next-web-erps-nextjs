@@ -61,7 +61,7 @@ export default function Hero({ onPrimaryClick }: HeroProps) {
           >
             <button
               onClick={onPrimaryClick}
-              className="bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange/90 transition-all hover:scale-105 shadow-lg w-full sm:w-auto"
+              className="bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-500/90 transition-all hover:scale-105 shadow-lg w-full sm:w-auto"
             >
               Request Demo
             </button>

@@ -124,7 +124,7 @@ const FAQ: React.FC = () => {
               href="tel:+919876543210"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue/90 transition-colors duration-200"
+              className="px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-500/90 transition-colors duration-200"
             >
               Call: +91 98765 43210
             </motion.a>

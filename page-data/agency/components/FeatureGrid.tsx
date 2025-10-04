@@ -77,7 +77,7 @@ export default function FeatureGrid() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue/10 text-blue-500 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 text-blue-500 rounded-full text-sm font-medium mb-6">
             Complete Agency Operations Platform
           </div>
           <h2 className="text-3xl lg:text-5xl font-display font-bold text-gray-900 mb-6">

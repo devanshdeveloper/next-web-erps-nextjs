@@ -213,7 +213,7 @@ const Testimonials = () => {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.1, opacity: 1 }}
               >
-                <div className="bg-slate-100 rounded-lg p-4 font-semibold text-slate-600 hover:bg-blue/10 hover:text-blue-500 transition-colors duration-200">
+                <div className="bg-slate-100 rounded-lg p-4 font-semibold text-slate-600 hover:bg-blue-500/10 hover:text-blue-500 transition-colors duration-200">
                   {brand}
                 </div>
               </motion.div>

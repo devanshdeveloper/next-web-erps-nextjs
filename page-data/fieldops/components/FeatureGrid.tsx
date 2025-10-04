@@ -120,7 +120,7 @@ const FeatureGrid: React.FC = () => {
                 className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-200 border border-gray-100 group"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 bg-blue/10 rounded-lg flex items-center justify-center group-hover:bg-blue/20 transition-colors duration-200">
+                  <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center group-hover:bg-blue-500/20 transition-colors duration-200">
                     <Icon className="w-6 h-6 text-blue-500" />
                   </div>
                   {feature.badge && (
@@ -149,7 +149,7 @@ const FeatureGrid: React.FC = () => {
         >
           <a
             href="#demo-form"
-            className="inline-flex items-center px-8 py-4 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue/90 transition-colors duration-200"
+            className="inline-flex items-center px-8 py-4 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-500/90 transition-colors duration-200"
           >
             See All Features in Action
             <BarChart3 className="w-5 h-5 ml-2" />

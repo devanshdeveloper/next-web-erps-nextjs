@@ -114,8 +114,8 @@ interface FeatureCardProps {
 
 function FeatureCard({ icon, title, description, tag, index }: FeatureCardProps) {
   const tagColors: Record<string, string> = {
-    Core: 'bg-blue/10 text-blue',
-    Popular: 'bg-orange/10 text-orange',
+    Core: 'bg-blue-500/10 text-blue',
+    Popular: 'bg-orange-500/10 text-orange',
     'India-ready': 'bg-emerald/10 text-emerald',
     Revenue: 'bg-purple-100 text-purple-700',
     Security: 'bg-red-100 text-red-700',
@@ -133,7 +133,7 @@ function FeatureCard({ icon, title, description, tag, index }: FeatureCardProps)
       className="bg-white rounded-xl p-6 md:p-8 border border-gray-200 hover:border-blue-500 transition-all"
     >
       <div className="flex items-start justify-between mb-4">
-        <div className="bg-blue/10 text-blue-500 p-3 rounded-lg">{icon}</div>
+        <div className="bg-blue-500/10 text-blue-500 p-3 rounded-lg">{icon}</div>
         <span className={`${tagColors[tag]} text-xs font-semibold px-2 py-1 rounded-full`}>
           {tag}
         </span>

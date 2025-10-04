@@ -126,7 +126,7 @@ const FeatureGrid = ({ onOpenDemoForm }) => {
             <motion.div
               key={index}
               whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
-              className="feature-card bg-white border border-gray-200 p-6 rounded-xl hover:border-blue/20 transition-all duration-300 group"
+              className="feature-card bg-white border border-gray-200 p-6 rounded-xl hover:border-blue-500/20 transition-all duration-300 group"
             >
               {/* Tag */}
               <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium mb-4 ${getTagColor(feature.tag)}`}>
@@ -134,7 +134,7 @@ const FeatureGrid = ({ onOpenDemoForm }) => {
               </div>
               
               {/* Icon */}
-              <div className="flex items-center justify-center w-14 h-14 bg-gray-50 rounded-lg mb-4 group-hover:bg-blue/5 transition-colors duration-300">
+              <div className="flex items-center justify-center w-14 h-14 bg-gray-50 rounded-lg mb-4 group-hover:bg-blue-500/5 transition-colors duration-300">
                 <feature.icon className="w-7 h-7 text-blue-500" />
               </div>
               
