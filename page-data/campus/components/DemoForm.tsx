@@ -1,29 +1,96 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send } from 'lucide-react';
 import { useState, FormEvent } from 'react';
+import { API_URL } from '../../../env';
 
 interface DemoFormProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+// Map student count range to approximate number
+const studentCountMap: Record<string, number> = {
+  '0-50': 50,
+  '51-200': 200,
+  '201-500': 500,
+  '501-1000': 1000,
+  '1000+': 1500,
+};
+
+// Map demo time values to backend enum
+const demoTimeMap: Record<string, string> = {
+  'morning': 'Morning (9 AM - 12 PM)',
+  'afternoon': 'Afternoon (12 PM - 3 PM)',
+  'evening': 'Evening (3 PM - 6 PM)',
+};
+
 export default function DemoForm({ isOpen, onClose }: DemoFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const formData = e.currentTarget;
+    const nameParts = (formData.fullName as unknown as HTMLInputElement).value.trim().split(' ');
+    const firstName = nameParts[0] || '';
+    const lastName = nameParts.slice(1).join(' ') || '';
 
-    setIsSubmitting(false);
-    setIsSuccess(true);
+    const payload = {
+      // Core contact information
+      firstName,
+      lastName,
+      email: (formData.email as unknown as HTMLInputElement).value,
+      phone: (formData.phone as unknown as HTMLInputElement).value,
+      contactRole: (formData.role as unknown as HTMLSelectElement).value,
 
-    setTimeout(() => {
-      setIsSuccess(false);
-      onClose();
-    }, 3000);
+      // Institute context
+      instituteName: (formData.institution as unknown as HTMLInputElement).value,
+      noOfStudents: studentCountMap[(formData.students as unknown as HTMLSelectElement).value] || undefined,
+      preferredDemoTime: demoTimeMap[(formData.demoTime as unknown as HTMLSelectElement).value] || undefined,
+
+      // Address
+      address: {
+        city: (formData.city as unknown as HTMLInputElement).value,
+      },
+
+      // Product & Intent
+      interestedProducts: ['NextWeb Campus'],
+
+      // Lead source
+      source: 'product_page' as const,
+      landingPage: typeof window !== 'undefined' ? window.location.href : '',
+
+      // Industry context
+      industry: 'education' as const,
+    };
+
+    try {
+      const response = await fetch(`${API_URL}/api/super-admin-lead/submit`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
+      setIsSuccess(true);
+      setTimeout(() => {
+        setIsSuccess(false);
+        onClose();
+      }, 3000);
+    } catch (err) {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -94,17 +161,23 @@ export default function DemoForm({ isOpen, onClose }: DemoFormProps) {
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
+                    {error && (
+                      <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                        {error}
+                      </div>
+                    )}
+
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
+                        <label htmlFor="fullName" className="block text-sm font-medium text-gray-900 mb-2">
                           Full Name *
                         </label>
                         <input
                           type="text"
-                          id="name"
-                          name="name"
+                          id="fullName"
+                          name="fullName"
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-gray-900 placeholder:text-gray-500"
                           placeholder="Rajesh Kumar"
                         />
                       </div>
@@ -117,7 +190,7 @@ export default function DemoForm({ isOpen, onClose }: DemoFormProps) {
                           id="role"
                           name="role"
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-gray-900"
                         >
                           <option value="">Select role</option>
                           <option value="principal">Principal</option>
@@ -138,7 +211,7 @@ export default function DemoForm({ isOpen, onClose }: DemoFormProps) {
                         id="institution"
                         name="institution"
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-gray-900 placeholder:text-gray-500"
                         placeholder="Sunshine Academy"
                       />
                     </div>
@@ -152,7 +225,7 @@ export default function DemoForm({ isOpen, onClose }: DemoFormProps) {
                           id="students"
                           name="students"
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-gray-900"
                         >
                           <option value="">Select range</option>
                           <option value="0-50">0-50</option>
@@ -172,7 +245,7 @@ export default function DemoForm({ isOpen, onClose }: DemoFormProps) {
                           id="city"
                           name="city"
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-gray-900 placeholder:text-gray-500"
                           placeholder="Mumbai"
                         />
                       </div>
@@ -188,7 +261,7 @@ export default function DemoForm({ isOpen, onClose }: DemoFormProps) {
                           id="phone"
                           name="phone"
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-gray-900 placeholder:text-gray-500"
                           placeholder="+91 98765 43210"
                         />
                       </div>
@@ -202,7 +275,7 @@ export default function DemoForm({ isOpen, onClose }: DemoFormProps) {
                           id="email"
                           name="email"
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-gray-900 placeholder:text-gray-500"
                           placeholder="rajesh@school.com"
                         />
                       </div>
@@ -215,12 +288,12 @@ export default function DemoForm({ isOpen, onClose }: DemoFormProps) {
                       <select
                         id="demoTime"
                         name="demoTime"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-gray-900"
                       >
                         <option value="">Select preferred time</option>
                         <option value="morning">Morning (9 AM - 12 PM)</option>
-                        <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
-                        <option value="evening">Evening (4 PM - 7 PM)</option>
+                        <option value="afternoon">Afternoon (12 PM - 3 PM)</option>
+                        <option value="evening">Evening (3 PM - 6 PM)</option>
                       </select>
                     </div>
 
