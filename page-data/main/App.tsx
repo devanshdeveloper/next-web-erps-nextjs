@@ -9,8 +9,11 @@ import TrustBar from './components/TrustBar';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import './App.css';
+import { redirect } from 'next/navigation';
 
 function App() {
+
+  redirect("/campus");
   return (
     <div className="min-h-screen">
       <Header />
