@@ -9,6 +9,7 @@ import {
   User, MapPin, Briefcase, School, Handshake, MessageSquare, 
   ArrowLeft, ArrowRight, Check, Send, Loader2 
 } from 'lucide-react';
+import { API_URL } from '../../../env';
 
 // Indian states for dropdown
 const indianStates = [
@@ -107,6 +108,7 @@ const ApplicationForm = forwardRef<ApplicationFormRef, ApplicationFormProps>(
     const [currentStep, setCurrentStep] = useState(1);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
     const {
       control,
@@ -185,14 +187,41 @@ const ApplicationForm = forwardRef<ApplicationFormRef, ApplicationFormProps>(
 
     const onSubmit = async (data: FormData) => {
       setIsSubmitting(true);
+      setError(null);
+
+      const payload = {
+        fullName: data.fullName,
+        phone: data.phone,
+        email: data.email || undefined,
+        state: data.state,
+        district: data.district,
+        profession: data.profession,
+        experience: data.experience,
+        interactsWithSchools: data.interactsWithSchools,
+        schoolCount: data.interactsWithSchools === 'yes' ? data.schoolCount : undefined,
+        partnershipType: data.partnershipType,
+        additionalContext: data.additionalContext || undefined,
+        consent: data.consent,
+      };
+
       try {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        console.log('Form submitted:', data);
+        const response = await fetch(`${API_URL}/api/partner-request/submit`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to submit application');
+        }
+
         setIsSuccess(true);
         onSubmitSuccess?.();
-      } catch (error) {
-        console.error('Submit error:', error);
+      } catch (err) {
+        console.error('Submit error:', err);
+        setError('Something went wrong. Please try again.');
       } finally {
         setIsSubmitting(false);
       }
@@ -291,6 +320,11 @@ const ApplicationForm = forwardRef<ApplicationFormRef, ApplicationFormProps>(
           <div className="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
             <div className="p-6 sm:p-8">
               <form onSubmit={handleSubmit(onSubmit)}>
+                {error && (
+                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                    {error}
+                  </div>
+                )}
                 <AnimatePresence mode="wait">
                   {/* Step 1: Personal Information */}
                   {currentStep === 1 && (
