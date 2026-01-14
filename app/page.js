@@ -1,107 +1,69 @@
-import MainPage from "../page-data/main/main"
+import MainPage from "../page-data/main/main";
+import { Schema, buildOrganizationSchema, buildWebSiteSchema, buildItemListSchema, YOUR_ORG } from "@/components/seo";
 
-export default MainPage;
+// Home page metadata - redirects to campus but still needs SEO for direct visits
+export const metadata = {
+    title: "Next Web ERPs – Powerful ERP Solutions for Schools, Colleges & Institutes",
+    description: "Next Web ERPs is a modular, scalable ERP ecosystem designed for schools, colleges, coaching institutes and organizations in India. Manage operations, people, data, and growth from a single unified system.",
+    keywords: "ERP Software India, School ERP, College ERP, Education ERP, Institute Management System, Business ERP, Next Web ERPs, School Management Software",
+    alternates: {
+        canonical: "https://erp.nextwebworks.in/",
+    },
+    openGraph: {
+        type: "website",
+        url: "https://erp.nextwebworks.in/",
+        title: "Next Web ERPs – Powerful ERP Solutions for Schools & Institutions",
+        description: "Modular, scalable ERP ecosystem for schools, colleges, coaching institutes, and organizations. Manage operations, people, data, and growth from one platform.",
+        images: [
+            {
+                url: "https://erp.nextwebworks.in/og-image.webp",
+                width: 1200,
+                height: 630,
+                alt: "Next Web ERPs - ERP Platform",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Next Web ERPs – Powerful ERP Solutions for Schools & Institutions",
+        description: "Modular, scalable ERP ecosystem for schools, colleges, and organizations in India.",
+        images: ["https://erp.nextwebworks.in/og-image.webp"],
+    },
+};
 
-// import Image from "next/image";
+// ERP products list for ItemList schema
+const erpProducts = [
+    { name: "Next Web Campus - School Management", url: "https://erp.nextwebworks.in/campus" },
+    { name: "Next Web Agency - Agency Management", url: "https://erp.nextwebworks.in/agency" },
+    { name: "Next Web BillDesk - Billing & Invoicing", url: "https://erp.nextwebworks.in/billdesk" },
+    { name: "Next Web Commerce - E-Commerce Platform", url: "https://erp.nextwebworks.in/commerce" },
+    { name: "Next Web FieldOps - Field Operations", url: "https://erp.nextwebworks.in/fieldops" },
+    { name: "Next Web FitHub - Fitness Management", url: "https://erp.nextwebworks.in/fithub" },
+    { name: "Next Web HelpDesk - Support Ticketing", url: "https://erp.nextwebworks.in/helpdesk" },
+    { name: "Next Web Inventory - Stock Management", url: "https://erp.nextwebworks.in/inventory" },
+    { name: "Next Web People - HR Management", url: "https://erp.nextwebworks.in/people" },
+    { name: "Next Web Plant - Manufacturing ERP", url: "https://erp.nextwebworks.in/plant" },
+    { name: "Next Web Procure - Procurement Management", url: "https://erp.nextwebworks.in/procure" },
+    { name: "Next Web SalonHub - Salon Management", url: "https://erp.nextwebworks.in/salonhub" },
+];
 
-// export default function Home() {
-//   return (
-//     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-//       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-//         <Image
-//           className="dark:invert"
-//           src="/next.svg"
-//           alt="Next.js logo"
-//           width={180}
-//           height={38}
-//           priority
-//         />
-//         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-//           <li className="mb-2 tracking-[-.01em]">
-//             Get started by editing{" "}
-//             <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-//               app/page.js
-//             </code>
-//             .
-//           </li>
-//           <li className="tracking-[-.01em]">
-//             Save and see your changes instantly.
-//           </li>
-//         </ol>
+// Build all schemas for the home page
+const schemas = [
+    buildOrganizationSchema(),
+    buildWebSiteSchema({ url: "https://erp.nextwebworks.in" }),
+    buildItemListSchema({
+        name: "Next Web ERPs - ERP Solutions",
+        description: "Complete suite of modular ERP solutions for Indian businesses and institutions",
+        url: "https://erp.nextwebworks.in/",
+        items: erpProducts,
+    }),
+].filter(Boolean);
 
-//         <div className="flex gap-4 items-center flex-col sm:flex-row">
-//           <a
-//             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-//             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//           >
-//             <Image
-//               className="dark:invert"
-//               src="/vercel.svg"
-//               alt="Vercel logomark"
-//               width={20}
-//               height={20}
-//             />
-//             Deploy now
-//           </a>
-//           <a
-//             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-//             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//           >
-//             Read our docs
-//           </a>
-//         </div>
-//       </main>
-//       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-//         <a
-//           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-//           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <Image
-//             aria-hidden
-//             src="/file.svg"
-//             alt="File icon"
-//             width={16}
-//             height={16}
-//           />
-//           Learn
-//         </a>
-//         <a
-//           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-//           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <Image
-//             aria-hidden
-//             src="/window.svg"
-//             alt="Window icon"
-//             width={16}
-//             height={16}
-//           />
-//           Examples
-//         </a>
-//         <a
-//           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-//           href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           <Image
-//             aria-hidden
-//             src="/globe.svg"
-//             alt="Globe icon"
-//             width={16}
-//             height={16}
-//           />
-//           Go to nextjs.org →
-//         </a>
-//       </footer>
-//     </div>
-//   );
-// }
+export default function HomePage() {
+    return (
+        <>
+            <Schema schema={schemas} id="home-schema" />
+            <MainPage />
+        </>
+    );
+}
