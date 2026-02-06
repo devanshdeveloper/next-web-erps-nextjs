@@ -1,18 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output : 'export',
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
-  },
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-
+  turbopack: {
+    root: __dirname,
+  },
   output: "standalone",
+  reactCompiler: true,
 };
 
 export default nextConfig;
